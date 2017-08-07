@@ -22,9 +22,10 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        _path = [UIBezierPath bezierPath];
-        _path.lineWidth = 10;
+        //_path = [UIBezierPath bezierPath];
+       // _path.lineWidth = 10;
         _color = [UIColor redColor];
+        _lines = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -33,45 +34,93 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     
+    //    NSLog(@" number of lines %i" ,[self.lines count]);
+    
     
     // Drawing code
     
-    [self.color setStroke];
+    for (int i = 0; i < self.lines.count; i++)
+        
+    {
+        
+        UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
+        
+        Line *line = [self.lines objectAtIndex:i];
+        
+        [line.lineColor setStroke];
+        
+        
+        NSLog(@"this is what is in IIIII %i", i);
+        
+        for (int j = 0; j < line.lineLocation.count; j++)
+        {
+            CGPoint currentPoint = [[line.lineLocation objectAtIndex:j] CGPointValue];
+            
+            if (j == 0)
+            {
+                [bezierPath moveToPoint:currentPoint];
+            }
+            else
+            {
+                [bezierPath addLineToPoint:currentPoint];
+            }
+        }
+        
+        [bezierPath stroke];
+    }
     
-    [self.path stroke];
+    
     
     NSLog(@"draw rect method");
-    
     
 }
 
 
 -(void)drawingStart:(CGPoint) location{
     
-    [self.path  moveToPoint: location];
     
     
+    Line *drawingStartLine = [[Line alloc] initWithColor:self.color andLocation:location];
+    
+    NSLog(@" number of lines %li" ,(long)[self.lines count]);
+    
+    NSLog(@"$$$$$$$$$ %@", drawingStartLine.lineLocation);
+    
+    [self.lines addObject:drawingStartLine];
+    
+    
+    // [self.path  moveToPoint: location];
     
     
     NSLog(@"draw rect move to point");
-
+    
     
     
 }
 -(void)drawingcontinue:(CGPoint)location{
     
-    [self.path addLineToPoint:location];
+    // [self.path addLineToPoint:location];
+    
+    //    Line *lastLine = [[Line alloc] initWithColor:self.color andLocation:location];
+    //
+    //    lastLine = self.lines.lastObject;
+    
+    NSLog(@"This is the last object in the array %@" , self.lines.lastObject);
+    
+    Line *lastLine = self.lines.lastObject;
+    
+    [lastLine.lineLocation addObject:[NSValue valueWithCGPoint:location]]; //why do I need this line?
     
     NSLog(@"draw rect add line to point ");
     [self setNeedsDisplay];
-
+    
     
 }
 
 -(void)SetColortoRed {
     
     self.color = [UIColor redColor];
-
+    
 }
 
 - (void)setColorBlue {

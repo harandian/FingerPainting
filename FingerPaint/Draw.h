@@ -13,7 +13,7 @@
 
 
 @property UIColor *color;
-//@property NSMutableArray *lines; 
+@property NSMutableArray *lines; 
 
 
 -(void)drawingStart:(CGPoint) location;

@@ -13,7 +13,7 @@
 
 @interface Line : UIView
 
-@property NSArray *lineLocation;
+@property NSMutableArray *lineLocation;
 @property UIColor *lineColor;
 @property float *lineWidth;
 

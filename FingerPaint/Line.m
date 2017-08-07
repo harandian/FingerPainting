@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         _lineColor = color;
-        _lineLocation = [[NSArray alloc] initWithObjects: [NSValue valueWithCGPoint:location], nil];
+        _lineLocation = [[NSMutableArray alloc] initWithObjects: [NSValue valueWithCGPoint:location], nil];
     }
     return self;
 }

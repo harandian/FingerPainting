@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  fingerDraw.h
 //  FingerPaint
 //
 //  Created by Hirad on 2017-08-04.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface fingerDraw : UIView
 
 
 @end
-

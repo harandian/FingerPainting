@@ -13,6 +13,8 @@
 		72BE73B71F351FF10045C5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BE73B51F351FF10045C5D2 /* Main.storyboard */; };
 		72BE73B91F351FF10045C5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BE73B81F351FF10045C5D2 /* Assets.xcassets */; };
 		72BE73BC1F351FF10045C5D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BE73BA1F351FF10045C5D2 /* LaunchScreen.storyboard */; };
+		72BE73EE1F35409A0045C5D2 /* Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE73ED1F35409A0045C5D2 /* Draw.m */; };
+		72BE73F11F36632B0045C5D2 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BE73F01F36632B0045C5D2 /* Line.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		72BE73B81F351FF10045C5D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72BE73BB1F351FF10045C5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72BE73BD1F351FF10045C5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BE73EC1F35409A0045C5D2 /* Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw.h; sourceTree = "<group>"; };
+		72BE73ED1F35409A0045C5D2 /* Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Draw.m; sourceTree = "<group>"; };
+		72BE73EF1F36632B0045C5D2 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		72BE73F01F36632B0045C5D2 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				72BE73B01F351FF10045C5D2 /* AppDelegate.m */,
 				72BE73B21F351FF10045C5D2 /* ViewController.h */,
 				72BE73B31F351FF10045C5D2 /* ViewController.m */,
+				72BE73EC1F35409A0045C5D2 /* Draw.h */,
+				72BE73ED1F35409A0045C5D2 /* Draw.m */,
+				72BE73EF1F36632B0045C5D2 /* Line.h */,
+				72BE73F01F36632B0045C5D2 /* Line.m */,
 				72BE73B51F351FF10045C5D2 /* Main.storyboard */,
 				72BE73B81F351FF10045C5D2 /* Assets.xcassets */,
 				72BE73BA1F351FF10045C5D2 /* LaunchScreen.storyboard */,
@@ -150,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BE73F11F36632B0045C5D2 /* Line.m in Sources */,
 				72BE73B41F351FF10045C5D2 /* ViewController.m in Sources */,
 				72BE73B11F351FF10045C5D2 /* AppDelegate.m in Sources */,
 				72BE73AE1F351FF10045C5D2 /* main.m in Sources */,
+				72BE73EE1F35409A0045C5D2 /* Draw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

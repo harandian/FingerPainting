@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,10 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWZ-ja-OOB" customClass="Draw">
+                                <rect key="frame" x="37.5" y="33.5" width="300" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8jc-et-xd0"/>
+                                    <constraint firstAttribute="height" constant="500" id="x1g-6z-Gji"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lq8-vg-xRI" appends="YES" id="2Df-Y8-7AF"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-7u-oH9">
+                                <rect key="frame" x="37" y="617" width="30" height="30"/>
+                                <state key="normal" title="RED"/>
+                                <connections>
+                                    <action selector="RedColorPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olc-2r-oqp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92H-7y-gse">
+                                <rect key="frame" x="168" y="617" width="38" height="30"/>
+                                <state key="normal" title="BLUE"/>
+                                <connections>
+                                    <action selector="BlueColorPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQq-wA-ll5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qva-rq-FkB">
+                                <rect key="frame" x="287" y="617" width="50" height="30"/>
+                                <state key="normal" title="YELLOW"/>
+                                <connections>
+                                    <action selector="YellowColorPikcer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lL-hE-pXL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="92H-7y-gse" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Du3-IU-pn1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="92H-7y-gse" secondAttribute="bottom" constant="20" id="LLy-Fo-rf4"/>
+                            <constraint firstItem="k9P-7u-oH9" firstAttribute="centerY" secondItem="92H-7y-gse" secondAttribute="centerY" id="QKc-nY-jwx"/>
+                            <constraint firstItem="Qva-rq-FkB" firstAttribute="leading" secondItem="92H-7y-gse" secondAttribute="trailing" constant="81" id="RhH-T4-tFf"/>
+                            <constraint firstItem="Qva-rq-FkB" firstAttribute="trailing" secondItem="yWZ-ja-OOB" secondAttribute="trailing" id="SnG-7h-7B3"/>
+                            <constraint firstItem="yWZ-ja-OOB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Xgj-JB-LZd"/>
+                            <constraint firstItem="k9P-7u-oH9" firstAttribute="leading" secondItem="yWZ-ja-OOB" secondAttribute="leading" id="dAv-9v-5MY"/>
+                            <constraint firstItem="yWZ-ja-OOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mkC-7v-mWH"/>
+                            <constraint firstItem="Qva-rq-FkB" firstAttribute="centerY" secondItem="92H-7y-gse" secondAttribute="centerY" id="oIJ-Hd-zyQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="draw" destination="yWZ-ja-OOB" id="csY-NS-YW9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lq8-vg-xRI">
+                    <connections>
+                        <action selector="panLocation:" destination="BYZ-38-t0r" id="jVG-P5-dU9"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>

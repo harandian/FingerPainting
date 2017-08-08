@@ -16,6 +16,7 @@
     if (self) {
         _lineColor = color;
         _lineLocation = [[NSMutableArray alloc] initWithObjects: [NSValue valueWithCGPoint:location], nil];
+        _lineWidth = 5.0;
     }
     return self;
 }

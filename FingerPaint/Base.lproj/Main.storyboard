@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,11 +54,19 @@
                                     <action selector="YellowColorPikcer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lL-hE-pXL"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.10000000000000001" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="0rp-Ji-pQ7">
+                                <rect key="frame" x="35.5" y="564" width="303.5" height="31"/>
+                                <connections>
+                                    <action selector="setLineWidth:" destination="BYZ-38-t0r" eventType="valueChanged" id="KFo-Iv-n3a"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="0rp-Ji-pQ7" firstAttribute="top" secondItem="yWZ-ja-OOB" secondAttribute="bottom" constant="30.5" id="4Rj-yv-kHj"/>
                             <constraint firstItem="92H-7y-gse" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Du3-IU-pn1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="92H-7y-gse" secondAttribute="bottom" constant="20" id="LLy-Fo-rf4"/>
+                            <constraint firstItem="0rp-Ji-pQ7" firstAttribute="trailing" secondItem="yWZ-ja-OOB" secondAttribute="trailing" id="Ocm-5s-gqS"/>
                             <constraint firstItem="k9P-7u-oH9" firstAttribute="centerY" secondItem="92H-7y-gse" secondAttribute="centerY" id="QKc-nY-jwx"/>
                             <constraint firstItem="Qva-rq-FkB" firstAttribute="leading" secondItem="92H-7y-gse" secondAttribute="trailing" constant="81" id="RhH-T4-tFf"/>
                             <constraint firstItem="Qva-rq-FkB" firstAttribute="trailing" secondItem="yWZ-ja-OOB" secondAttribute="trailing" id="SnG-7h-7B3"/>
@@ -66,6 +74,7 @@
                             <constraint firstItem="k9P-7u-oH9" firstAttribute="leading" secondItem="yWZ-ja-OOB" secondAttribute="leading" id="dAv-9v-5MY"/>
                             <constraint firstItem="yWZ-ja-OOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mkC-7v-mWH"/>
                             <constraint firstItem="Qva-rq-FkB" firstAttribute="centerY" secondItem="92H-7y-gse" secondAttribute="centerY" id="oIJ-Hd-zyQ"/>
+                            <constraint firstItem="0rp-Ji-pQ7" firstAttribute="leading" secondItem="yWZ-ja-OOB" secondAttribute="leading" id="xgj-mE-miV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -79,6 +88,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>

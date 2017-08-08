@@ -86,5 +86,14 @@
 //    NSLog(@"%f x %f y", location.x, location.y);
 //    
 //}
+- (IBAction)setLineWidth:(id)sender {
+    
+    UISlider *slider = (UISlider *)sender;
+    
+    self.draw.width = slider.value;
+    
+ //   [self.draw setLineWidth:lineWidth];
+    
+}
 
 @end

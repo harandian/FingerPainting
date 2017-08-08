@@ -13,7 +13,8 @@
 
 
 @property UIColor *color;
-@property NSMutableArray *lines; 
+@property NSMutableArray *lines;
+@property float width;
 
 
 -(void)drawingStart:(CGPoint) location;
@@ -21,6 +22,8 @@
 - (void)setColorBlue;
 -(void)SetColortoRed;
 - (void)setColorYellow;
+//- (void) setLineWidth: (float) lineWidth;
+
 
 
 

@@ -15,7 +15,7 @@
 
 @property NSMutableArray *lineLocation;
 @property UIColor *lineColor;
-@property float *lineWidth;
+@property float lineWidth;
 
 - (instancetype)initWithColor :(UIColor*) color andLocation: (CGPoint)location;
 

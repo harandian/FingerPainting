@@ -22,7 +22,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        //_path = [UIBezierPath bezierPath];
+        _path = [UIBezierPath bezierPath];
        // _path.lineWidth = 10;
         _color = [UIColor redColor];
         _lines = [[NSMutableArray alloc] init];
@@ -43,11 +43,16 @@
         
     {
         
-        UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
+        self.path = [[UIBezierPath alloc] init];
+        
         
         Line *line = [self.lines objectAtIndex:i];
         
         [line.lineColor setStroke];
+        
+        self.path.lineWidth = self.width;
+        
+        //self.path.lineWidth = line.lineWidth;
         
         
         NSLog(@"this is what is in IIIII %i", i);
@@ -58,15 +63,15 @@
             
             if (j == 0)
             {
-                [bezierPath moveToPoint:currentPoint];
+                [self.path moveToPoint:currentPoint];
             }
             else
             {
-                [bezierPath addLineToPoint:currentPoint];
+                [self.path addLineToPoint:currentPoint];
             }
         }
         
-        [bezierPath stroke];
+        [self.path stroke];
     }
     
     
@@ -134,5 +139,13 @@
     self.color = [UIColor yellowColor];
     
 }
+
+//- (void) setLineWidth: (float) lineWidth {
+//    
+//    self.path.lineWidth = lineWidth;
+//    
+//    NSLog(@"Line width is %.2f", self.path.lineWidth);
+//    
+//}
 
 @end
